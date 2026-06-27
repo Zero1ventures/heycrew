@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy — HeyCrew</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --teal: #0ABFBC;
+      --deep-teal: #04514F;
+      --dark: #022322;
+      --yellow: #FFD93D;
+      --bg: #f7fafa;
+      --text: #1a2e2e;
+      --muted: #4a6464;
+      --border: #d0e8e8;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.8;
+      font-size: 16px;
+    }
+
+    header {
+      background: var(--dark);
+      padding: 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      border-bottom: 3px solid var(--teal);
+    }
+
+    .header-inner {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 18px 32px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .header-title {
+      color: white;
+      font-size: 15px;
+      font-weight: 500;
+      letter-spacing: 0.01em;
+    }
+
+    .header-title span { color: var(--teal); }
+
+    .hero {
+      background: linear-gradient(135deg, var(--dark) 0%, var(--deep-teal) 100%);
+      padding: 64px 32px 56px;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(2rem, 5vw, 3rem);
+      color: white;
+      margin-bottom: 12px;
+      line-height: 1.2;
+    }
+
+    .hero h1 span { color: var(--teal); }
+
+    .hero p {
+      color: rgba(255,255,255,0.65);
+      font-size: 15px;
+      font-weight: 300;
+      max-width: 420px;
+      margin: 0 auto;
+    }
+
+    .effective-badge {
+      display: inline-block;
+      margin-top: 20px;
+      background: rgba(10,191,188,0.15);
+      border: 1px solid rgba(10,191,188,0.35);
+      color: var(--teal);
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 6px 14px;
+      border-radius: 100px;
+    }
+
+    main {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 56px 32px 80px;
+    }
+
+    .toc {
+      background: white;
+      border: 1px solid var(--border);
+      border-left: 4px solid var(--teal);
+      border-radius: 0 12px 12px 0;
+      padding: 24px 28px;
+      margin-bottom: 52px;
+    }
+
+    .toc-label {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 14px;
+    }
+
+    .toc ol {
+      list-style: none;
+      counter-reset: toc;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6px 24px;
+    }
+
+    @media (max-width: 540px) { .toc ol { grid-template-columns: 1fr; } }
+
+    .toc li {
+      counter-increment: toc;
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+    }
+
+    .toc li::before {
+      content: counter(toc, decimal-leading-zero);
+      font-size: 11px;
+      font-weight: 500;
+      color: var(--teal);
+      flex-shrink: 0;
+    }
+
+    .toc a {
+      color: var(--deep-teal);
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 400;
+      transition: color 0.15s;
+    }
+
+    .toc a:hover { color: var(--teal); }
+
+    section {
+      margin-bottom: 52px;
+      scroll-margin-top: 80px;
+    }
+
+    .section-number {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--teal);
+      margin-bottom: 6px;
+    }
+
+    h2 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.5rem;
+      color: var(--dark);
+      margin-bottom: 16px;
+      line-height: 1.3;
+    }
+
+    p {
+      color: var(--muted);
+      margin-bottom: 14px;
+      font-weight: 300;
+    }
+
+    p:last-child { margin-bottom: 0; }
+
+    ul, ol {
+      padding-left: 20px;
+      margin-bottom: 14px;
+    }
+
+    li {
+      color: var(--muted);
+      font-weight: 300;
+      margin-bottom: 6px;
+    }
+
+    strong { color: var(--text); font-weight: 500; }
+
+    .info-box {
+      background: rgba(10,191,188,0.06);
+      border: 1px solid rgba(10,191,188,0.2);
+      border-radius: 12px;
+      padding: 20px 24px;
+      margin: 20px 0;
+    }
+
+    .info-box p { margin-bottom: 0; font-size: 14px; }
+
+    hr {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 0 0 52px;
+    }
+
+    .contact-card {
+      background: var(--dark);
+      border-radius: 16px;
+      padding: 36px;
+      text-align: center;
+    }
+
+    .contact-card h2 { color: white; }
+    .contact-card p { color: rgba(255,255,255,0.55); }
+
+    .contact-link {
+      display: inline-block;
+      margin-top: 16px;
+      background: var(--teal);
+      color: var(--dark);
+      font-weight: 500;
+      font-size: 14px;
+      padding: 12px 28px;
+      border-radius: 100px;
+      text-decoration: none;
+      transition: opacity 0.15s;
+    }
+
+    .contact-link:hover { opacity: 0.85; }
+
+    footer {
+      background: var(--dark);
+      border-top: 1px solid rgba(255,255,255,0.06);
+      padding: 24px 32px;
+      text-align: center;
+    }
+
+    footer p {
+      color: rgba(255,255,255,0.35);
+      font-size: 13px;
+      margin: 0;
+    }
+
+    footer a { color: var(--teal); text-decoration: none; }
+
+    a { color: var(--teal); }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <img src="heycrew_icon.png" alt="HeyCrew logo" style="width:36px;height:36px;border-radius:10px;object-fit:cover;">
+    <span class="header-title"><span>HeyCrew</span> — Privacy Policy</span>
+  </div>
+</header>
+
+<div class="hero">
+  <h1>Your Privacy <span>Matters</span></h1>
+  <p>We built HeyCrew to make planning easier — not to collect your data.</p>
+  <div class="effective-badge">Effective June 26, 2026</div>
+</div>
+
+<main>
+
+  <nav class="toc" aria-label="Table of contents">
+    <div class="toc-label">Contents</div>
+    <ol>
+      <li><a href="#info-we-collect">Information We Collect</a></li>
+      <li><a href="#how-we-use">How We Use Information</a></li>
+      <li><a href="#sharing">Sharing &amp; Disclosure</a></li>
+      <li><a href="#storage">Data Storage &amp; Security</a></li>
+      <li><a href="#retention">Data Retention</a></li>
+      <li><a href="#children">Children's Privacy</a></li>
+      <li><a href="#your-rights">Your Rights</a></li>
+      <li><a href="#gdpr-ccpa">GDPR &amp; CCPA</a></li>
+      <li><a href="#third-parties">Third-Party Services</a></li>
+      <li><a href="#changes">Changes to This Policy</a></li>
+      <li><a href="#contact">Contact Us</a></li>
+    </ol>
+  </nav>
+
+  <section id="intro">
+    <p>This Privacy Policy describes how <strong>Zero1 Ventures, LLC</strong> ("we," "us," or "our") collects, uses, and handles information when you use <strong>HeyCrew</strong>, a product of Zero1 Ventures, LLC ("the App"). By using the App, you agree to the practices described in this policy.</p>
+    <p>HeyCrew is designed with privacy in mind. <strong>We do not require you to create an account.</strong> Your identity within the App is represented by an anonymous device identifier generated and stored on your device.</p>
+  </section>
+
+  <hr>
+
+  <section id="info-we-collect">
+    <div class="section-number">01</div>
+    <h2>Information We Collect</h2>
+
+    <p><strong>Information you provide directly:</strong></p>
+    <ul>
+      <li>A display name you choose when setting up the App (not linked to any real identity)</li>
+      <li>Event details you create: names, dates, descriptions, availability, ideas, and chat messages</li>
+      <li>Poll responses and votes within events</li>
+      <li>Optional email address if you choose to sign up for updates via our website</li>
+      <li>If you link a Google or Apple account: your name and email address as provided by that identity provider, used solely for authentication</li>
+    </ul>
+
+    <p><strong>Information collected automatically:</strong></p>
+    <ul>
+      <li>A randomly generated device UUID stored in your device's secure storage (iOS Keychain or Android Keystore) — this is your anonymous identity in the App</li>
+      <li>Encrypted credential data (a synthetic email and password) stored in your device's secure storage to maintain your session without requiring a traditional account</li>
+      <li>Push notification token (if you grant notification permission), to deliver event updates</li>
+      <li>Basic usage analytics such as events created or joined, features used, and app open events, collected via Firebase Analytics. Analytics data is retained for 14 months per Firebase's standard retention settings. This data is not tied to your real-world identity.</li>
+      <li>Crash and diagnostic data collected via Firebase Crashlytics (forthcoming), to help us identify and fix technical issues</li>
+    </ul>
+
+    <p><strong>Information stored about guests and event participants:</strong></p>
+    <p>When an event creator invites participants, the App stores the display name assigned to or chosen by each participant, along with their event activity (availability, RSVPs, ideas, and messages). Event creators are responsible for ensuring that any participants they invite have consented to this data being stored and shared with other event members. We do not independently verify participant consent.</p>
+
+    <div class="info-box">
+      <p>💡 <strong>No account required.</strong> We never ask for your name, email, phone number, or any personally identifying information to use the core features of the App. Your display name is chosen by you and can be anything.</p>
+    </div>
+  </section>
+
+  <section id="how-we-use">
+    <div class="section-number">02</div>
+    <h2>How We Use Information</h2>
+    <p>We use the information collected to:</p>
+    <ul>
+      <li>Operate and provide the App's features — event creation, scheduling, group coordination</li>
+      <li>Maintain your anonymous session and identity across devices and reinstalls</li>
+      <li>Deliver push notifications about events you're part of (with your permission)</li>
+      <li>Process in-app purchases through Apple App Store or Google Play, via RevenueCat</li>
+      <li>Understand how the App is used in aggregate, in order to improve performance and features</li>
+      <li>Identify and fix crashes and technical issues</li>
+      <li>Respond to support requests if you contact us</li>
+      <li>Send product updates if you opted into our email list</li>
+    </ul>
+    <p>We do <strong>not</strong> sell your personal data to third parties. We may use aggregated, anonymized data to improve our services and for internal business purposes.</p>
+  </section>
+
+  <section id="sharing">
+    <div class="section-number">03</div>
+    <h2>Sharing &amp; Disclosure</h2>
+    <p>We do not sell, rent, or trade your information. We may share limited data only in these circumstances:</p>
+    <ul>
+      <li><strong>With other event members:</strong> Your chosen display name and event contributions (availability, ideas, messages, RSVPs) are visible to other members of events you join.</li>
+      <li><strong>Service providers:</strong> We use Supabase (database and backend), Firebase (analytics, push notifications, and crash reporting), and RevenueCat (subscription management) to operate the App. These providers process data on our behalf and are bound by their own privacy policies and, where applicable, data processing agreements with us.</li>
+      <li><strong>Apple and Google:</strong> If you use Sign in with Apple or Sign in with Google, those providers share limited authentication data with us. In-app purchases are processed directly by Apple or Google; we do not receive your payment information.</li>
+      <li><strong>Legal requirements:</strong> If required by law, court order, or to protect the rights and safety of our users or the public.</li>
+    </ul>
+    <p>We are not responsible for the privacy practices of third-party services. We encourage you to review their privacy policies.</p>
+  </section>
+
+  <section id="storage">
+    <div class="section-number">04</div>
+    <h2>Data Storage &amp; Security</h2>
+    <p>Event data is stored on Supabase-managed servers located in the United States (US West region). If you are located outside the United States, your data will be transferred to and processed in the US. By using the App, you consent to this transfer.</p>
+    <p>Your device credentials (the synthetic identifier that represents your anonymous identity) are stored in your device's hardware-backed secure storage — iOS Keychain on iPhone, and Android Keystore on Android devices. On iOS, this data persists across App reinstalls. On Android, credentials are also backed up to Google's Block Store service, associated with your Google account, to enable recovery after reinstallation.</p>
+    <p>We implement reasonable technical and organizational measures to protect your data. However, no method of transmission over the internet is 100% secure, and we cannot guarantee absolute security.</p>
+    <p>Push notification tokens are stored in our database solely to deliver event notifications. You can revoke notification permissions at any time in your device settings.</p>
+  </section>
+
+  <section id="retention">
+    <div class="section-number">05</div>
+    <h2>Data Retention</h2>
+    <p>We retain data for as long as it is needed to provide the App's services, subject to the following:</p>
+    <ul>
+      <li><strong>Active event data</strong> (trips, availability, messages, ideas, polls, checklists) — retained for the life of the event. Free-tier events expire after 30 days of creation and are scheduled for deletion thereafter.</li>
+      <li><strong>Device credentials and identity data</strong> — retained until you delete your account via the in-app deletion feature or contact us to request deletion.</li>
+      <li><strong>Push notification tokens</strong> — retained while you are an active member of at least one event. Tokens may persist after uninstall until cleaned up on a failed delivery attempt.</li>
+      <li><strong>Firebase Analytics data</strong> — retained for 14 months per Firebase's standard retention settings.</li>
+      <li><strong>Email signup data</strong> — retained until you unsubscribe or request deletion.</li>
+      <li><strong>Support communications</strong> — retained for up to 2 years to assist with ongoing issues.</li>
+    </ul>
+    <p>To request complete deletion of all data associated with your device, use the in-app account deletion feature (Settings → Delete Account) or contact us at <a href="mailto:contact@heycrewapp.com">contact@heycrewapp.com</a>. Deletion requests are processed within 30 days.</p>
+  </section>
+
+  <section id="children">
+    <div class="section-number">06</div>
+    <h2>Children's Privacy</h2>
+    <p>HeyCrew is not directed at children under the age of 13. We do not knowingly collect personal information from children under 13. If you believe a child under 13 has provided information through the App, please contact us at <a href="mailto:contact@heycrewapp.com">contact@heycrewapp.com</a> and we will promptly delete it.</p>
+    <p>Users between 13 and 18 must have parental or guardian consent to use the App, as described in our Terms of Service.</p>
+  </section>
+
+  <section id="your-rights">
+    <div class="section-number">07</div>
+    <h2>Your Rights</h2>
+    <p>Depending on your location, you may have the right to:</p>
+    <ul>
+      <li>Access the data associated with your device</li>
+      <li>Request correction of inaccurate data</li>
+      <li>Request deletion of your data (see Section 5 for how to do this)</li>
+      <li>Opt out of push notifications via your device settings</li>
+      <li>Opt out of Firebase Analytics data collection via your device's advertising settings</li>
+      <li>Unsubscribe from marketing emails via the unsubscribe link in any email</li>
+    </ul>
+    <p>To exercise any of these rights, contact us at <a href="mailto:contact@heycrewapp.com">contact@heycrewapp.com</a>. We will respond to all data rights requests within 30 days.</p>
+  </section>
+
+  <section id="gdpr-ccpa">
+    <div class="section-number">08</div>
+    <h2>GDPR &amp; CCPA</h2>
+
+    <p><strong>European Economic Area (GDPR).</strong> If you are located in the EEA, UK, or Switzerland, we process your data on the following legal bases:</p>
+    <ul>
+      <li><strong>Contract performance</strong> — processing necessary to provide the App's core features you have requested</li>
+      <li><strong>Legitimate interests</strong> — aggregate analytics and crash reporting to improve the App, where those interests are not overridden by your rights</li>
+      <li><strong>Consent</strong> — push notifications (you may withdraw consent at any time via device settings)</li>
+    </ul>
+    <p>Your data is transferred to the United States, which may not provide the same level of data protection as your home jurisdiction. We rely on Standard Contractual Clauses (SCCs) and vendor Data Processing Agreements (DPAs) with Supabase, Firebase/Google, and RevenueCat as transfer mechanisms.</p>
+    <p>You have the right to lodge a complaint with your local supervisory authority if you believe your data has been processed unlawfully.</p>
+
+    <p><strong>California (CCPA/CPRA).</strong> California residents have the right to:</p>
+    <ul>
+      <li>Know what personal information we collect and how it is used</li>
+      <li>Request deletion of your personal information</li>
+      <li>Opt out of the sale or sharing of personal information — <strong>we do not sell or share personal information</strong> as defined under the CCPA</li>
+      <li>Non-discrimination for exercising your rights</li>
+    </ul>
+    <p>To exercise California rights, contact us at <a href="mailto:contact@heycrewapp.com">contact@heycrewapp.com</a>.</p>
+  </section>
+
+  <section id="third-parties">
+    <div class="section-number">09</div>
+    <h2>Third-Party Services</h2>
+    <p>The App uses the following third-party services, each governed by their own privacy policies:</p>
+    <ul>
+      <li><strong>Supabase</strong> — database, authentication, and real-time backend (<a href="https://supabase.com/privacy">supabase.com/privacy</a>)</li>
+      <li><strong>Firebase Analytics</strong> — aggregate usage analytics to understand how the App is used (<a href="https://firebase.google.com/support/privacy">firebase.google.com/support/privacy</a>)</li>
+      <li><strong>Firebase Cloud Messaging (FCM)</strong> — push notification delivery</li>
+      <li><strong>Firebase Crashlytics</strong> — crash and diagnostic reporting (forthcoming)</li>
+      <li><strong>RevenueCat</strong> — subscription and in-app purchase management (<a href="https://www.revenuecat.com/privacy">revenuecat.com/privacy</a>)</li>
+      <li><strong>Google Block Store</strong> — on Android, credential backup and recovery via your Google account (<a href="https://policies.google.com/privacy">policies.google.com/privacy</a>)</li>
+      <li><strong>Sign in with Apple</strong> — optional authentication via Apple ID (<a href="https://www.apple.com/legal/privacy/">apple.com/legal/privacy</a>)</li>
+      <li><strong>Sign in with Google</strong> — optional authentication via Google account (<a href="https://policies.google.com/privacy">policies.google.com/privacy</a>)</li>
+      <li><strong>Apple App Store / Google Play</strong> — app distribution and in-app purchase processing</li>
+    </ul>
+    <p>We are not responsible for the data practices of these third-party services. We have accepted Data Processing Agreements (DPAs) with Supabase, Firebase/Google, and RevenueCat where required.</p>
+  </section>
+
+  <section id="changes">
+    <div class="section-number">10</div>
+    <h2>Changes to This Policy</h2>
+    <p>We may update this Privacy Policy from time to time. When we do, we will update the effective date at the top of this page. For significant changes, we will post a notice on our website at heycrewapp.com. Your continued use of the App after changes are posted constitutes your acceptance of the updated policy.</p>
+  </section>
+
+  <section id="contact">
+    <div class="contact-card">
+      <div class="section-number" style="color:rgba(10,191,188,0.7)">11</div>
+      <h2>Contact Us</h2>
+      <p>Questions about this Privacy Policy, want to request data deletion, or need to report a content concern? We're here to help.</p>
+      <a href="mailto:contact@heycrewapp.com" class="contact-link">contact@heycrewapp.com</a>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <p>© 2026 Zero1 Ventures, LLC. All rights reserved. &nbsp;·&nbsp; <a href="./terms.html">Terms of Service</a></p>
+</footer>
+
+</body>
+</html>
