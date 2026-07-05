@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Terms of Service — HeyCrew</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --teal: #0ABFBC;
+      --deep-teal: #04514F;
+      --dark: #022322;
+      --yellow: #FFD93D;
+      --bg: #f7fafa;
+      --text: #1a2e2e;
+      --muted: #4a6464;
+      --border: #d0e8e8;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.8;
+      font-size: 16px;
+    }
+
+    header {
+      background: var(--dark);
+      padding: 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      border-bottom: 3px solid var(--yellow);
+    }
+
+    .header-inner {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 18px 32px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .header-title {
+      color: white;
+      font-size: 15px;
+      font-weight: 500;
+    }
+
+    .header-title span { color: var(--yellow); }
+
+    .hero {
+      background: linear-gradient(135deg, var(--dark) 0%, #0a3533 100%);
+      padding: 64px 32px 56px;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(2rem, 5vw, 3rem);
+      color: white;
+      margin-bottom: 12px;
+      line-height: 1.2;
+    }
+
+    .hero h1 span { color: var(--yellow); }
+
+    .hero p {
+      color: rgba(255,255,255,0.65);
+      font-size: 15px;
+      font-weight: 300;
+      max-width: 420px;
+      margin: 0 auto;
+    }
+
+    .effective-badge {
+      display: inline-block;
+      margin-top: 20px;
+      background: rgba(255,217,61,0.12);
+      border: 1px solid rgba(255,217,61,0.3);
+      color: var(--yellow);
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 6px 14px;
+      border-radius: 100px;
+    }
+
+    main {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 56px 32px 80px;
+    }
+
+    .toc {
+      background: white;
+      border: 1px solid var(--border);
+      border-left: 4px solid var(--yellow);
+      border-radius: 0 12px 12px 0;
+      padding: 24px 28px;
+      margin-bottom: 52px;
+    }
+
+    .toc-label {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 14px;
+    }
+
+    .toc ol {
+      list-style: none;
+      counter-reset: toc;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6px 24px;
+    }
+
+    @media (max-width: 540px) { .toc ol { grid-template-columns: 1fr; } }
+
+    .toc li {
+      counter-increment: toc;
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+    }
+
+    .toc li::before {
+      content: counter(toc, decimal-leading-zero);
+      font-size: 11px;
+      font-weight: 500;
+      color: #b89a00;
+      flex-shrink: 0;
+    }
+
+    .toc a {
+      color: var(--deep-teal);
+      text-decoration: none;
+      font-size: 14px;
+      transition: color 0.15s;
+    }
+
+    .toc a:hover { color: var(--teal); }
+
+    section {
+      margin-bottom: 52px;
+      scroll-margin-top: 80px;
+    }
+
+    .section-number {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--teal);
+      margin-bottom: 6px;
+    }
+
+    h2 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.5rem;
+      color: var(--dark);
+      margin-bottom: 16px;
+      line-height: 1.3;
+    }
+
+    h3 {
+      font-size: 1rem;
+      color: var(--dark);
+      margin: 22px 0 10px;
+      font-weight: 500;
+    }
+
+    p {
+      color: var(--muted);
+      margin-bottom: 14px;
+      font-weight: 300;
+    }
+
+    p:last-child { margin-bottom: 0; }
+
+    ul, ol {
+      padding-left: 20px;
+      margin-bottom: 14px;
+    }
+
+    li {
+      color: var(--muted);
+      font-weight: 300;
+      margin-bottom: 6px;
+    }
+
+    strong { color: var(--text); font-weight: 500; }
+
+    .info-box {
+      background: rgba(255,217,61,0.07);
+      border: 1px solid rgba(255,217,61,0.25);
+      border-radius: 12px;
+      padding: 20px 24px;
+      margin: 20px 0;
+    }
+
+    .info-box p { margin-bottom: 0; font-size: 14px; }
+
+    .warning-box {
+      background: rgba(220,60,60,0.05);
+      border: 1px solid rgba(220,60,60,0.15);
+      border-radius: 12px;
+      padding: 20px 24px;
+      margin: 20px 0;
+    }
+
+    .warning-box p { margin-bottom: 0; font-size: 14px; }
+
+    hr {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 0 0 52px;
+    }
+
+    .contact-card {
+      background: var(--dark);
+      border-radius: 16px;
+      padding: 36px;
+      text-align: center;
+    }
+
+    .contact-card h2 { color: white; }
+    .contact-card p { color: rgba(255,255,255,0.55); }
+
+    .contact-link {
+      display: inline-block;
+      margin-top: 16px;
+      background: var(--yellow);
+      color: var(--dark);
+      font-weight: 500;
+      font-size: 14px;
+      padding: 12px 28px;
+      border-radius: 100px;
+      text-decoration: none;
+      transition: opacity 0.15s;
+    }
+
+    .contact-link:hover { opacity: 0.85; }
+
+    footer {
+      background: var(--dark);
+      border-top: 1px solid rgba(255,255,255,0.06);
+      padding: 24px 32px;
+      text-align: center;
+    }
+
+    footer p {
+      color: rgba(255,255,255,0.35);
+      font-size: 13px;
+      margin: 0;
+    }
+
+    footer a { color: var(--teal); text-decoration: none; }
+
+    a { color: var(--teal); }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <img src="heycrew_icon.png" alt="HeyCrew logo" style="width:36px;height:36px;border-radius:10px;object-fit:cover;">
+    <span class="header-title"><span>HeyCrew</span> — Terms of Service</span>
+  </div>
+</header>
+
+<div class="hero">
+  <h1>Terms of <span>Service</span></h1>
+  <p>Please read these terms before using HeyCrew. They govern your use of the App.</p>
+  <div class="effective-badge">Effective June 26, 2026</div>
+</div>
+
+<main>
+
+  <nav class="toc" aria-label="Table of contents">
+    <div class="toc-label">Contents</div>
+    <ol>
+      <li><a href="#acceptance">Acceptance of Terms</a></li>
+      <li><a href="#use-of-app">Use of the App</a></li>
+      <li><a href="#user-content">User Content</a></li>
+      <li><a href="#objectionable-content">Objectionable Content</a></li>
+      <li><a href="#purchases">In-App Purchases</a></li>
+      <li><a href="#free-limits">Free Tier &amp; Plus</a></li>
+      <li><a href="#ip">Intellectual Property</a></li>
+      <li><a href="#privacy">Privacy</a></li>
+      <li><a href="#third-party">Third-Party Services</a></li>
+      <li><a href="#identity">Identity &amp; Credentials</a></li>
+      <li><a href="#disclaimers">Disclaimers</a></li>
+      <li><a href="#limitation">Limitation of Liability</a></li>
+      <li><a href="#indemnification">Indemnification</a></li>
+      <li><a href="#termination">Termination</a></li>
+      <li><a href="#arbitration">Dispute Resolution</a></li>
+      <li><a href="#governing-law">Governing Law</a></li>
+      <li><a href="#app-store">App Store Terms</a></li>
+      <li><a href="#general">General Provisions</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ol>
+  </nav>
+
+  <section id="intro">
+    <p>These Terms of Service ("Terms") are a legal agreement between you and <strong>Zero1 Ventures, LLC</strong> ("we," "us," or "our") governing your use of <strong>HeyCrew</strong>, a product of Zero1 Ventures, LLC, including the mobile application available on iOS and Android and any related services (collectively, the "App"). These Terms also serve as the end user license agreement (EULA) for the App; see Section 17 for additional terms that apply when you obtain the App through the Apple App Store or Google Play.</p>
+    <p>By downloading, installing, or using the App, you agree to be bound by these Terms and by our <a href="./privacy.html">Privacy Policy</a>. If you do not agree, do not use the App.</p>
+  </section>
+
+  <hr>
+
+  <section id="acceptance">
+    <div class="section-number">01</div>
+    <h2>Acceptance of Terms</h2>
+    <p>You must be at least 13 years of age to use the App. If you are between 13 and 18, you represent that your parent or legal guardian has reviewed and agreed to these Terms on your behalf and consents to your use of the App.</p>
+    <p>We may update these Terms from time to time. When we do, we will update the effective date at the top of this page and post the revised Terms at this URL. For material changes, we will take reasonable steps to notify you. Your continued use of the App after the revised Terms take effect constitutes your acceptance of them.</p>
+  </section>
+
+  <section id="use-of-app">
+    <div class="section-number">02</div>
+    <h2>Use of the App</h2>
+    <p>You agree to use HeyCrew only for lawful purposes and in accordance with these Terms. You agree <strong>not</strong> to:</p>
+    <ul>
+      <li>Use the App to harass, threaten, abuse, or harm other users</li>
+      <li>Post content that is unlawful, defamatory, obscene, hateful, or otherwise objectionable</li>
+      <li>Attempt to gain unauthorized access to the App's backend, databases, or other users' data</li>
+      <li>Use automated scripts, bots, or scrapers to interact with the App</li>
+      <li>Reverse-engineer, decompile, or disassemble any part of the App, except to the limited extent this restriction is prohibited by applicable law</li>
+      <li>Use the App to send spam or unsolicited messages to other users</li>
+      <li>Impersonate any person or entity, or misrepresent your affiliation with a person or entity</li>
+    </ul>
+    <p>We reserve the right to suspend or terminate access for violations of these Terms.</p>
+  </section>
+
+  <section id="user-content">
+    <div class="section-number">03</div>
+    <h2>User Content</h2>
+    <p>You retain ownership of any content you create in the App, including event names, messages, ideas, availability, and other contributions ("User Content").</p>
+    <p>By submitting User Content, you grant Zero1 Ventures, LLC a limited, non-exclusive, royalty-free license to store, transmit, and display that content solely to operate the App and provide its features to you and your event members.</p>
+    <p>You are solely responsible for your User Content. While we do not pre-screen or actively monitor all content, we review content that is reported to us and we may remove content or take action against accounts as described in Section 4. We reserve the right, but do not assume the obligation, to remove content that violates these Terms.</p>
+    <p>By creating an event, you acknowledge that you are responsible for ensuring any guests or participants you invite are comfortable having their display name and participation data shared with other members of that event within the App.</p>
+    <div class="warning-box">
+      <p>⚠️ <strong>Remember:</strong> Content you post in an event is visible to all members of that event. Do not share sensitive personal information in event chats or descriptions.</p>
+    </div>
+  </section>
+
+  <section id="objectionable-content">
+    <div class="section-number">04</div>
+    <h2>Objectionable Content &amp; Abusive Behavior</h2>
+    <p>HeyCrew has <strong>zero tolerance</strong> for objectionable content and abusive behavior. By using HeyCrew, you agree that you will not create, upload, post, or transmit any content that is unlawful, harassing, abusive, threatening, harmful, vulgar, obscene, hateful, or otherwise objectionable, and that you will not engage in abusive conduct toward other users.</p>
+    <p>You may report objectionable content or abusive users at any time using the in-app reporting tools (available on chat messages, ideas, and comments) or the in-app block feature, or by contacting us directly at <a href="mailto:support@heycrewapp.com">support@heycrewapp.com</a>. <strong>We will review every report and will remove objectionable content and take action against abusive users within 24 hours of a verified report.</strong></p>
+    <p>Continued or serious violation of this policy may result in suspension or permanent termination of your access to the App.</p>
+  </section>
+
+  <section id="purchases">
+    <div class="section-number">05</div>
+    <h2>In-App Purchases</h2>
+    <p>HeyCrew offers an optional paid subscription, <strong>HeyCrew Plus</strong>, which unlocks premium features across your events. HeyCrew Plus is offered as an auto-renewable subscription on a monthly or annual basis.</p>
+    <p>The current price, billing period, and features of HeyCrew Plus are shown in the App and on the App Store or Google Play before you complete a purchase. All purchases are processed by Apple (App Store) or Google (Google Play); payment, billing, and refunds are governed by the policies of the platform you purchased from. We do not store or process your payment card information.</p>
+    <p><strong>Auto-renewal.</strong> Your subscription automatically renews for the same period at the then-current price unless you cancel it at least 24 hours before the end of the current period. Your account will be charged for renewal within 24 hours before the end of the current period. You can manage or cancel your subscription at any time in your device's App Store or Google Play account settings; cancellation takes effect at the end of the current billing period.</p>
+    <p><strong>Refunds.</strong> Zero1 Ventures, LLC does not process payments directly and does not issue refunds directly. Refund requests are handled by Apple or Google according to their policies, and you may have additional refund or cancellation rights under the law of your jurisdiction.</p>
+    <p><strong>Changes.</strong> We may modify, add, or remove Plus features over time. We will provide reasonable notice of any price increase, which will not take effect for your existing subscription until the next renewal after notice, consistent with platform requirements.</p>
+  </section>
+
+  <section id="free-limits">
+    <div class="section-number">06</div>
+    <h2>Free Tier &amp; Plus</h2>
+    <p>HeyCrew offers a free tier with certain usage limits (for example, on the number of members, ideas, messages, or active events, and how long events are retained). The specific limits that apply to the free tier are described in the App and may be adjusted from time to time. Subscribing to HeyCrew Plus removes or raises these limits as described at the point of purchase.</p>
+    <div class="info-box">
+      <p>💡 We may adjust free tier limits and Plus benefits over time. Current limits and benefits are always shown in the App.</p>
+    </div>
+  </section>
+
+  <section id="ip">
+    <div class="section-number">07</div>
+    <h2>Intellectual Property</h2>
+    <p>All rights in the App, including its design, code, graphics, branding, and features, are owned by Zero1 Ventures, LLC or its licensors. Nothing in these Terms grants you any ownership rights in the App.</p>
+    <p>The name "HeyCrew," the app logo, and associated branding are trademarks of Zero1 Ventures, LLC. You may not use our trademarks without prior written permission.</p>
+  </section>
+
+  <section id="privacy">
+    <div class="section-number">08</div>
+    <h2>Privacy</h2>
+    <p>Your use of the App is also governed by our <a href="./privacy.html">Privacy Policy</a>, which is incorporated into these Terms by reference. By using the App, you consent to the data practices described in the Privacy Policy.</p>
+  </section>
+
+  <section id="third-party">
+    <div class="section-number">09</div>
+    <h2>Third-Party Services</h2>
+    <p>The App relies on third-party services to operate, which currently include Supabase (database and backend), Firebase including Firebase Cloud Messaging (analytics and push notifications), RevenueCat (subscription management), Google Block Store (Android credential backup), Apple, and Google. We may add or replace service providers from time to time; material changes will be reflected in an updated version of these Terms. Your use of the App is subject to the terms and privacy policies of these providers. We are not responsible for the availability, accuracy, or conduct of any third-party service, and any interruption or failure of a third-party service does not constitute a breach of these Terms by Zero1 Ventures, LLC.</p>
+    <p>The App may in the future incorporate features powered by artificial intelligence or automated recommendations. Any such features are provided for planning convenience only and do not constitute professional advice of any kind. You should not rely on App-generated content as a substitute for professional judgment.</p>
+  </section>
+
+  <section id="identity">
+    <div class="section-number">10</div>
+    <h2>Identity &amp; Credentials</h2>
+    <p>HeyCrew does not require a traditional account. Your identity within the App is tied to a set of credentials stored on your device (iOS Keychain or Android secure storage). <strong>If you lose access to your device, uninstall the App on Android without backing up your credentials, or otherwise lose your stored credentials, you may permanently lose access to your events and associated data.</strong> We may have no ability to recover credentials on your behalf.</p>
+    <p>On Android, HeyCrew may use Google's Block Store service to back up your credentials to your Google account to assist with recovery after reinstallation. This backup is subject to Google's own terms and availability and is not guaranteed.</p>
+    <p>If you choose to link a Google or Apple account to HeyCrew, that connection is used solely to associate your existing App identity with that account. We do not use linked accounts to access your contacts, calendar, email, or any other data outside of authentication.</p>
+  </section>
+
+  <section id="disclaimers">
+    <div class="section-number">11</div>
+    <h2>Disclaimers</h2>
+    <p>THE APP IS PROVIDED "AS IS" AND "AS AVAILABLE" WITHOUT WARRANTIES OF ANY KIND, EXPRESS OR IMPLIED. TO THE FULLEST EXTENT PERMITTED BY LAW, ZERO1 VENTURES, LLC DISCLAIMS ALL WARRANTIES, INCLUDING BUT NOT LIMITED TO:</p>
+    <ul>
+      <li>Warranties of merchantability, fitness for a particular purpose, and non-infringement</li>
+      <li>Warranties that the App will be uninterrupted, error-free, or free of viruses or harmful components</li>
+      <li>Warranties regarding the accuracy, reliability, or completeness of any content</li>
+      <li>Warranties that any specific feature will remain available in any future version of the App</li>
+    </ul>
+    <p>We do not guarantee that events will be saved indefinitely or that data will not be lost due to technical failures. <strong>We do not maintain backups of user-generated content on your behalf.</strong> You are responsible for preserving any event information you wish to retain.</p>
+    <p>HeyCrew is developed and maintained by a small independent team. We make no representation that the App will be available continuously or without interruption, and we assume no service level obligations of any kind.</p>
+    <p>We are working to improve accessibility over time and welcome feedback at the contact address below.</p>
+    <p>We make no representation that the App is appropriate or available for use outside of the United States.</p>
+    <p>Some jurisdictions do not allow the exclusion of certain warranties, so some of the above exclusions may not apply to you.</p>
+  </section>
+
+  <section id="limitation">
+    <div class="section-number">12</div>
+    <h2>Limitation of Liability</h2>
+    <p>TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, ZERO1 VENTURES, LLC AND ITS OFFICERS, DIRECTORS, EMPLOYEES, AND AFFILIATES WILL NOT BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES ARISING FROM YOUR USE OF, OR INABILITY TO USE, THE APP, INCLUDING ANY LOSS OF DATA, LOSS OF EVENTS, OR LOSS OF ACCESS TO YOUR APP IDENTITY.</p>
+    <p>TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, OUR TOTAL LIABILITY TO YOU FOR ALL CLAIMS RELATING TO THE APP WILL NOT EXCEED THE GREATER OF (A) THE AMOUNT YOU PAID TO US, OR THROUGH THE APP STORE OR GOOGLE PLAY FOR THE APP, IN THE TWELVE MONTHS PRECEDING THE CLAIM, OR (B) TWENTY-FIVE U.S. DOLLARS ($25).</p>
+    <p>Some jurisdictions do not allow the exclusion or limitation of certain damages, so some of the above limitations may not apply to you. Nothing in these Terms limits liability that cannot be limited under applicable law.</p>
+  </section>
+
+  <section id="indemnification">
+    <div class="section-number">13</div>
+    <h2>Indemnification</h2>
+    <p>To the extent permitted by applicable law, you agree to indemnify, defend, and hold harmless Zero1 Ventures, LLC and its officers, directors, employees, and agents from and against any claims, liabilities, damages, losses, and expenses (including reasonable legal fees) arising out of or in any way connected with: (a) your use of the App; (b) your User Content; (c) your violation of these Terms; or (d) your violation of any rights of another person or entity.</p>
+  </section>
+
+  <section id="termination">
+    <div class="section-number">14</div>
+    <h2>Termination</h2>
+    <p>You may stop using the App at any time by deleting it from your device. To delete your event data, use the in-app account deletion feature (Settings &rarr; Delete Account) or contact us at <a href="mailto:support@heycrewapp.com">support@heycrewapp.com</a>.</p>
+    <p>We reserve the right to suspend or terminate your access to the App at any time, with or without notice, if we believe you have violated these Terms. Upon termination, your right to use the App ceases immediately.</p>
+    <p>We also reserve the right to discontinue the App at any time. We are not obligated to provide advance notice of discontinuation beyond what Apple or Google may require, and we are not liable for any loss resulting from App discontinuation. Sections that by their nature should survive termination (including Intellectual Property, Disclaimers, Limitation of Liability, Indemnification, Dispute Resolution, and Governing Law) will survive.</p>
+  </section>
+
+  <section id="arbitration">
+    <div class="section-number">15</div>
+    <h2>Dispute Resolution &amp; Arbitration</h2>
+    <p><strong>Please read this section carefully. It affects your legal rights, including your right to bring a lawsuit in court and to participate in a class action. It also includes a way to opt out.</strong></p>
+
+    <h3>Informal resolution first</h3>
+    <p>Before starting an arbitration or other proceeding, you agree to first contact us at <a href="mailto:support@heycrewapp.com">support@heycrewapp.com</a> with a brief description of the dispute and the relief you seek, and to give us <strong>60 days</strong> to resolve it informally and in good faith. Many disputes can be resolved this way.</p>
+
+    <h3>Binding individual arbitration</h3>
+    <p>If we cannot resolve the dispute informally, you and Zero1 Ventures, LLC agree that any dispute, claim, or controversy arising out of or relating to these Terms or the App, including questions of arbitrability, will be resolved exclusively through <strong>binding individual arbitration</strong> administered by the American Arbitration Association ("AAA") under its Consumer Arbitration Rules, available at <a href="https://www.adr.org" target="_blank" rel="noopener">adr.org</a>, rather than in court, except as provided in this section.</p>
+
+    <h3>No class actions</h3>
+    <p>You and Zero1 Ventures, LLC each waive the right to bring or participate in a class action, class-wide arbitration, private attorney general action, or any other consolidated or representative proceeding. Disputes must be brought in your individual capacity only. If this waiver is found unenforceable as to a particular claim, that claim, and only that claim, will be severed and brought in the courts identified in Section 16, while all other claims proceed in arbitration.</p>
+
+    <h3>Your right to opt out</h3>
+    <p>You may opt out of this Dispute Resolution &amp; Arbitration section by emailing <a href="mailto:support@heycrewapp.com">support@heycrewapp.com</a> with the subject line "Arbitration Opt-Out" within <strong>30 days</strong> of first accepting these Terms. Your email must include the display name and device associated with your use of the App. If you opt out, disputes will be resolved in the courts identified in Section 16, and the rest of these Terms continue to apply. Opting out of arbitration has no other effect on your use of the App.</p>
+
+    <h3>Coordinated or mass filings</h3>
+    <p>If 25 or more similar arbitration demands are submitted by or with the coordination of the same or coordinated counsel, you and we agree the demands will be administered together in staged batches under the AAA's applicable mass-arbitration or supplementary procedures, with representative "bellwether" cases decided first, in order to promote efficiency and manage costs. Any statute of limitations will be tolled for demands awaiting their batch.</p>
+
+    <h3>Small claims exception</h3>
+    <p>Either party may instead bring an individual claim in small claims court in Hillsborough County, Florida, as long as the claim qualifies and remains in small claims court.</p>
+
+    <h3>Procedure and costs</h3>
+    <p>Arbitration will be conducted remotely by default, by videoconference or document submission, unless both parties agree otherwise or the arbitrator determines an in-person hearing is necessary, which would take place in Hillsborough County, Florida. The arbitrator's decision will be final and binding and may be entered as a judgment in any court of competent jurisdiction. Filing fees and arbitrator compensation are governed by the AAA's Consumer Arbitration Rules. We will not seek attorneys' fees from you in arbitration unless the arbitrator finds your claim was frivolous or brought for an improper purpose.</p>
+
+    <p>If any portion of this section other than the class action waiver is found unenforceable, that portion will be severed and the remainder will continue in full force.</p>
+  </section>
+
+  <section id="governing-law">
+    <div class="section-number">16</div>
+    <h2>Governing Law</h2>
+    <p>These Terms are governed by and construed in accordance with the laws of the State of Florida, United States, without regard to its conflict of law provisions, and, as to arbitration, the Federal Arbitration Act. Any dispute not subject to arbitration under Section 15, any claim brought by a user who has opted out, and any action to enforce an arbitration award, shall be brought exclusively in the state or federal courts located in Hillsborough County, Florida, and you consent to personal jurisdiction in those courts.</p>
+  </section>
+
+  <section id="app-store">
+    <div class="section-number">17</div>
+    <h2>Apple App Store &amp; Google Play Additional Terms</h2>
+    <p>These Terms are between you and Zero1 Ventures, LLC only, and not with Apple Inc. ("Apple") or Google LLC ("Google"). The following additional terms apply when you obtain or use the App through the Apple App Store, and (where noted) Google Play. In the event of any conflict between these additional terms and the rest of these Terms, these additional terms control with respect to your use of the App obtained through the relevant store.</p>
+
+    <h3>For the Apple App Store</h3>
+    <ul>
+      <li><strong>Acknowledgement.</strong> You and we acknowledge that these Terms are concluded between you and Zero1 Ventures, LLC only, and not with Apple. Zero1 Ventures, LLC, not Apple, is solely responsible for the App and its content. These Terms may not provide for usage rules that conflict with the Apple Media Services Terms and Conditions, and in the event of a conflict, those usage rules control.</li>
+      <li><strong>Scope of license.</strong> The license granted to you for the App is a non-transferable license to use the App on any Apple-branded products that you own or control, as permitted by the Usage Rules in the Apple Media Services Terms and Conditions, except that the App may be accessed and used by other accounts associated with you via Family Sharing or volume purchasing where applicable.</li>
+      <li><strong>Maintenance and support.</strong> Zero1 Ventures, LLC is solely responsible for providing any maintenance and support services for the App, as specified in these Terms or required by law. You and we acknowledge that Apple has no obligation whatsoever to furnish any maintenance or support services for the App.</li>
+      <li><strong>Warranty.</strong> Zero1 Ventures, LLC is solely responsible for any product warranties, whether express or implied by law, to the extent not effectively disclaimed. If the App fails to conform to any applicable warranty, you may notify Apple, and Apple may refund the purchase price of the App (if any) to you. To the maximum extent permitted by applicable law, Apple has no other warranty obligation whatsoever with respect to the App.</li>
+      <li><strong>Product claims.</strong> Zero1 Ventures, LLC, not Apple, is responsible for addressing any claims by you or any third party relating to the App or your possession or use of the App, including but not limited to: (i) product liability claims; (ii) any claim that the App fails to conform to any applicable legal or regulatory requirement; and (iii) claims arising under consumer protection, privacy, or similar legislation.</li>
+      <li><strong>Intellectual property.</strong> In the event of any third-party claim that the App or your possession and use of the App infringes that third party's intellectual property rights, Zero1 Ventures, LLC, not Apple, will be solely responsible for the investigation, defense, settlement, and discharge of any such claim.</li>
+      <li><strong>Legal compliance.</strong> You represent and warrant that you are not located in a country that is subject to a U.S. Government embargo or that has been designated by the U.S. Government as a "terrorist supporting" country, and that you are not listed on any U.S. Government list of prohibited or restricted parties. You also agree that you will not use the App for any purpose prohibited by U.S. law, including the development, design, manufacture, or production of nuclear, missile, or chemical or biological weapons.</li>
+      <li><strong>Developer name and address.</strong> Any questions, complaints, or claims regarding the App should be directed to: Zero1 Ventures, LLC, 4511 W. Dale Ave, Tampa, FL 33609, United States, <a href="mailto:support@heycrewapp.com">support@heycrewapp.com</a>.</li>
+      <li><strong>Third-party terms.</strong> You agree to comply with all applicable third-party terms of agreement when using the App (for example, your wireless data service agreement).</li>
+      <li><strong>Third-party beneficiary.</strong> You and we acknowledge and agree that Apple and Apple's subsidiaries are third-party beneficiaries of these Terms, and that upon your acceptance of these Terms, Apple will have the right (and will be deemed to have accepted the right) to enforce these Terms against you as a third-party beneficiary.</li>
+    </ul>
+
+    <h3>For Google Play</h3>
+    <p>If you obtain the App through Google Play, these Terms are between you and Zero1 Ventures, LLC only, and not with Google. Your use of the App must comply with the then-current Google Play Terms of Service. Google is not responsible for the App or its content and has no obligation to provide maintenance or support for the App.</p>
+  </section>
+
+  <section id="general">
+    <div class="section-number">18</div>
+    <h2>General Provisions</h2>
+    <p><strong>Severability.</strong> If any provision of these Terms is found to be invalid or unenforceable, that provision will be modified to the minimum extent necessary to make it enforceable, or severed if it cannot be, and the remaining provisions will continue in full force and effect.</p>
+    <p><strong>Entire Agreement.</strong> These Terms, together with the Privacy Policy, constitute the entire agreement between you and Zero1 Ventures, LLC regarding the App and supersede all prior agreements, representations, and understandings.</p>
+    <p><strong>Assignment.</strong> You may not assign or transfer these Terms. We may assign these Terms in connection with a merger, acquisition, reorganization, or sale of assets.</p>
+    <p><strong>Waiver.</strong> Our failure to enforce any provision of these Terms will not constitute a waiver of our right to enforce that provision in the future.</p>
+    <p><strong>Force Majeure.</strong> We will not be liable for any failure or delay in performance caused by circumstances beyond our reasonable control, including natural disasters, internet or hosting outages, third-party service failures, governmental actions, or the unavailability of key personnel.</p>
+    <p><strong>Independent Developer.</strong> HeyCrew is an independently developed product. Zero1 Ventures, LLC is not affiliated with, endorsed by, or sponsored by Apple Inc. or Google LLC, except as expressly noted in connection with App Store and Google Play distribution.</p>
+  </section>
+
+  <section id="contact">
+    <div class="contact-card">
+      <div class="section-number" style="color:rgba(10,191,188,0.7)">19</div>
+      <h2>Contact Us</h2>
+      <p>Questions about these Terms, or a content concern? Reach Zero1 Ventures, LLC at 4511 W. Dale Ave, Tampa, FL 33609, or by email below. We review all moderation reports within 24 hours.</p>
+      <a href="mailto:support@heycrewapp.com" class="contact-link">support@heycrewapp.com</a>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <p>© 2026 Zero1 Ventures, LLC. All rights reserved. &nbsp;·&nbsp; <a href="./privacy.html">Privacy Policy</a></p>
+</footer>
+
+</body>
+</html>
